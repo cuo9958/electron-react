@@ -10,7 +10,7 @@ directories:
 files:
   - "assets/"
   - "package.json"
-  - "public/index.html"
+  - "dist/index.html"
   - "native/index.js"
   - "native/preload.js"
 
