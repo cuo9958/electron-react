@@ -20,6 +20,7 @@ win:
     - target: "nsis"
       arch:
         - "x64"
+    - target: "portable"
 
 linux:
   icon: "assets/app-icon/png/512x512.png"
