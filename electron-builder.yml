@@ -1,6 +1,6 @@
 appId: "com.example.react-electron"
 copyright: "GFC"
-productName: "re"
+productName: "re-demo"
 
 asar: "true"
 
@@ -10,7 +10,7 @@ directories:
 files:
   - "assets/"
   - "package.json"
-  - "dist/index.html"
+  - "build/"
   - "native/index.js"
   - "native/preload.js"
 

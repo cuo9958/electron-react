@@ -4,6 +4,7 @@ const {
     Tray,
     screen,
     ipcMain,
+    globalShortcut,
 } = require('electron');
 
 const path = require('path');
@@ -37,6 +38,10 @@ function createWindow() {
 
     const startURL = isDev ? 'http://localhost:3000' : `file://${path.join(rootFolder, '/build/index.html')}`;
     mainWindow.loadURL(startURL);
+
+    globalShortcut.register('CommandOrControl+Shift+i', function () {
+        mainWindow.webContents.openDevTools();
+    });
 
     mainWindow.once('ready-to-show', () => mainWindow.show());
 
