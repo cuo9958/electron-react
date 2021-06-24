@@ -29,10 +29,13 @@ function createWindow() {
         backgroundColor: '#403F4D',
         icon: path.join(rootFolder, 'assets', 'icon.png'),
         webPreferences: {
-            nodeIntegration: false,
+            nodeIntegration: true,
             worldSafeExecuteJavaScript: false,
             preload: path.join(__dirname, 'preload.js'),
             devTools: true,
+            webSecurity: false,
+            allowRunningInsecureContent: true,
+            contextIsolation: false,
         },
     });
 
