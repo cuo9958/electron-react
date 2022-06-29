@@ -8,6 +8,7 @@
         "dev:web": "node scripts/start.js",
         "mac": "electron-builder",
         "win": "electron-builder --win",
+        "i:electron": "cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ npm install -D electron",
         "build:web": "node scripts/build.js"
     },
     "keywords": [],
