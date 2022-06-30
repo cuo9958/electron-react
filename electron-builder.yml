@@ -1,43 +1,35 @@
-appId: "com.example.react-electron"
-copyright: "GFC"
-productName: "re-demo"
+appId: 'com.idongwo.desk'
+copyright: 'GFC'
+productName: 'easyhome_desk'
 
-asar: "true"
+asar: 'true'
 
 directories:
-  output: "release"
+    output: 'release'
 
 files:
-  - "assets/"
-  - "package.json"
-  - "build/"
-  - "native/index.js"
-  - "native/preload.js"
+    - 'assets/'
+    - 'package.json'
+    - 'build/'
+    - 'native/main.js'
+    - 'native/preload.js'
 
 win:
-  icon: "assets/app-icon/win/icon.ico"
-  target:
-    - target: "nsis"
-      arch:
-        - "x64"
-    - target: "portable"
-
-linux:
-  icon: "assets/app-icon/png/512x512.png"
-  category: "Utility"
-  target:
-    - "AppImage"
-    - "deb"
-    - "rpm"
+    icon: 'assets/app-icon/win/icon.ico'
+    target:
+        - target: 'nsis'
+          arch:
+              - 'x64'
+        - target: 'portable'
 
 mac:
-  category: "public.app-category.productivity"
-  icon: "assets/app-icon/mac/icon.icns"
-  gatekeeperAssess: false
-  hardenedRuntime: true
-  target:
-    - "zip"
-    - "dmg"
+    category: 'public.app-category.productivity'
+    icon: 'assets/app-icon/mac/icon.icns'
+    gatekeeperAssess: false
+    hardenedRuntime: true
+    target:
+        - 'zip'
+        - 'dmg'
 
 electronDownload:
-  mirror: 'https://npm.taobao.org/mirrors/electron/'
+    mirror: 'https://npm.taobao.org/mirrors/electron/'

@@ -1,23 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { HashRouter } from 'react-router-dom';
-import { Provider } from 'mobx-react';
-import stores from './models';
-import Routes from './routes';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-import './index.less';
-import 'rsuite/dist/styles/rsuite-default.css';
-
-class App extends React.Component {
-    render() {
-        return (
-            <Provider {...stores}>
-                <HashRouter>
-                    <Routes />
-                </HashRouter>
-            </Provider>
-        );
-    }
-}
-
-render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
